@@ -21,13 +21,13 @@ npm install
 npm start
 ```
 
+Open in browser [http://localhost:8080](http://localhost:8080)
+
 ## Test
 
 ```
 npm run test
 ```
-
-Open in browser [http://localhost:8080](http://localhost:8080)
 
 ## Build
 

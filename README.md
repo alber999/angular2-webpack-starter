@@ -10,13 +10,13 @@ Starter pack with sample application created from [https://angular.io/docs/ts/la
 
 ## Installation
 
-```bash
+```
 npm install
 ```
 
 ## Run
 
-```bash
+```
 npm start
 ```
 
@@ -24,7 +24,7 @@ Open in browser [http://localhost:8080](http://localhost:8080)
 
 ## Build
 
-```bash
+```
 npm run build
 ```
 

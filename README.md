@@ -20,6 +20,12 @@ npm install
 npm start
 ```
 
+## Test
+
+```
+npm run test
+```
+
 Open in browser [http://localhost:8080](http://localhost:8080)
 
 ## Build

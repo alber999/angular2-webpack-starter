@@ -7,6 +7,7 @@ Starter pack with sample application created from [https://angular.io/docs/ts/la
 * node >= 4.x
 * npm >= 2.15
 * webpack >= 1.12
+* karma >= 0.13
 
 ## Installation
 

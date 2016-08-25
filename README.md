@@ -1,4 +1,4 @@
-#  Angular2.rc1 webpack starter pack
+#  Angular2.rc5 webpack starter pack
 
 Starter pack with sample application created from [https://angular.io/docs/ts/latest/guide/webpack.html](https://angular.io/docs/ts/latest/guide/webpack.html)
 

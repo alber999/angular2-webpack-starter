@@ -9,6 +9,16 @@ Starter pack with sample application created from [https://angular.io/docs/ts/la
 * webpack >= 1.12
 * karma >= 0.13
 
+## Environment
+
+Tested on:
+
+```
+node -v; npm -v
+v4.5.0
+2.15.9
+```
+
 ## Installation
 
 ```

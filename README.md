@@ -1,13 +1,17 @@
-#  Angular2.rc6 webpack starter pack
+#  Angular2.rc6 webpack starter pack with i18n native support
 
 Starter pack with sample application created from [https://angular.io/docs/ts/latest/guide/webpack.html](https://angular.io/docs/ts/latest/guide/webpack.html)
 
 ## Requirements
 
-* node >= 4.x
+* node >= 4.4
 * npm >= 2.15
-* webpack >= 1.12
+* angular = 2.0.0-rc.6
+* webpack >= 1.13
 * karma >= 0.13
+* typescript >= 2.0.2
+* angular-compiler-cli = 0.6.0
+* gulp >= 3.9
 
 ## Environment
 
@@ -24,6 +28,56 @@ v4.5.0
 ```
 npm install
 ```
+
+## Extract i18n messages from templates
+
+```
+node_modules/.bin/ng-xi18n
+```
+
+## Create custom language i18n XLF files
+
+```
+cp messages.xlf src/resources/i18n/messages.en.xlf
+...
+cp messages.xlf src/resources/i18n/messages.[LANG_N].xlf
+```
+
+Then complete "targets" for each i18n XLF file
+
+## Convert i18n XLF to Typescript 
+
+```
+node_modules/.bin/gulp i18n-xlf2ts
+```
+
+## Set current app language
+
+Current language is set in:
+
+```
+src/main.ts
+```
+
+when main module is bootstrapped:
+
+```
+import {TRANSLATION_EN} from "./resources/i18n/messages.en";
+... 
+
+platformBrowserDynamic().bootstrapModule(
+    AppModule,
+    {
+        providers: [
+            {provide: TRANSLATIONS, useValue: TRANSLATION_EN},
+            {provide: TRANSLATIONS_FORMAT, useValue: "xlf"},
+            {provide: LOCALE_ID, useValue: "en"}
+        ]
+    });
+```
+
+This is just a starter sample. Of course you can implement you own logic.
+
 
 ## Run
 

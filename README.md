@@ -1,4 +1,4 @@
-#  Angular2.rc6 webpack starter pack with i18n native support
+#  Angular 2.0.0 final webpack starter pack with i18n native support
 
 Starter pack with sample application created from [https://angular.io/docs/ts/latest/guide/webpack.html](https://angular.io/docs/ts/latest/guide/webpack.html)
 
@@ -6,9 +6,9 @@ Starter pack with sample application created from [https://angular.io/docs/ts/la
 
 * node >= 4.4
 * npm >= 2.15
-* angular = 2.0.0-rc.6
+* angular = 2.0.0 final
 * webpack >= 1.13
-* karma >= 0.13
+* karma >= 1.2
 * typescript >= 2.0.2
 * angular-compiler-cli = 0.6.0
 * gulp >= 3.9

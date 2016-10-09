@@ -52,11 +52,11 @@ FILES_TO_DOCKER=(
 # LOG FUNCTIONS
 ##################################################
 function log_banner() {
-    echo -e "\033[44m$1\033[00m"
+    echo -e "\033[42m$1\033[00m"
 }
 
 function log_info() {
-    echo -e "\033[36mINFO: $1\033[00m"
+    echo -e "\033[32mINFO: $1\033[00m"
 }
 
 function log_warning() {

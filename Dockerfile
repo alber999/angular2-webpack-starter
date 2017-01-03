@@ -1,4 +1,4 @@
-FROM node:argon
+FROM node:boron
 MAINTAINER Alberto Galiana <alberto.galiana@savethecode.com>
 
 ENV DEBIAN_FRONTEND noninteractive

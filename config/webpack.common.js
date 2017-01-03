@@ -11,7 +11,7 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ['', '.js', '.ts']
+        extensions: ['', '.ts', '.js']
     },
 
     module: {
@@ -30,12 +30,12 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                exclude: helpers.root('src', 'resources'),
+                exclude: helpers.root('src', 'resources', 'css'),
                 loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
             },
             {
                 test: /\.css$/,
-                include: helpers.root('src', 'resources'),
+                include: helpers.root('src', 'resources', 'css'),
                 loader: 'raw'
             },
             {

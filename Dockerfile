@@ -6,7 +6,7 @@ ENV PHANTOMJS_BIN "/usr/local/bin/phantomjs"
 
 RUN apt-get -y update --fix-missing
 RUN apt-get -y install vim nano curl net-tools htop bash-completion grc git
-RUN npm i -g phantomjs-prebuilt http-server
+RUN npm i -g phantomjs-prebuilt gulp http-server
 RUN apt-get clean
 
 COPY /tmp/github_rsa /root/.ssh/

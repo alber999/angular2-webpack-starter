@@ -7,7 +7,7 @@ Starter pack with sample application created from https://angular.io/docs/ts/lat
 This starter pack includes nice features:
 
 * i18n native support
-* i18n management gulp tasks
+* i18n management gulp & npm tasks
 * test coverage reports
 * production sources compression
 * docker runner to deploy at ease

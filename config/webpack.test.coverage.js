@@ -8,8 +8,13 @@ module.exports = webpackMerge(testConfig, {
             {
                 test: /\.ts$/,
                 include: helpers.root('src'),
-                loader: 'istanbul-instrumenter'
+                loader: 'istanbul-instrumenter-loader'
             }
         ]
-    }
+    },
+    reporters: [ 'progress', 'coverage-istanbul' ],
+    coverageIstanbulReporter: {
+        reports: [ 'text-summary' ],
+        fixWebpackSourcePaths: true
+    },
 });

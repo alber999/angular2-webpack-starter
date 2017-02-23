@@ -7,3 +7,4 @@ dist
 config/karma-test-shim.js
 tmp
 coverage
+npm-debug.log

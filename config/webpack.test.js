@@ -4,7 +4,7 @@ module.exports = {
     devtool: 'inline-source-map',
 
     resolve: {
-        extensions: ['', '.ts', '.js']
+        extensions: ['.ts', '.js']
     },
 
     module: {
@@ -15,23 +15,32 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                loader: 'html'
+                loader: 'html-loader'
 
             },
             {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-                loader: 'null'
+                loader: 'null-loader'
             },
             {
                 test: /\.css$/,
                 exclude: helpers.root('src', 'resources'),
-                loader: 'null'
+                loader: 'null-loader'
             },
             {
                 test: /\.css$/,
                 include: helpers.root('src', 'resources'),
-                loader: 'raw'
+                loader: 'raw-loader'
             }
         ]
-    }
+    },
+
+    plugins: [
+        new webpack.ContextReplacementPlugin(
+            // The (\\|\/) piece accounts for path separators in *nix and Windows
+            /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+            helpers.root('./src'), // location of your src
+            {} // a map of your routes
+        )
+    ]
 }

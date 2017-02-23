@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 var helpers = require('./helpers');
 
 module.exports = {

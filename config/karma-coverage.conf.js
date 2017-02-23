@@ -2,7 +2,7 @@ var webpackConfig = require('./webpack.test.coverage');
 
 module.exports = function (config) {
     var _config = {
-        basePath: '.',
+        basePath: '',
 
         frameworks: ['jasmine'],
 
@@ -11,10 +11,20 @@ module.exports = function (config) {
         ],
 
         preprocessors: {
-            './config/karma-test-shim.js': ['webpack', 'sourcemap', 'coverage']
+            './config/karma-test-shim.js': ['coverage', 'webpack', 'sourcemap']
         },
 
         webpack: webpackConfig,
+
+        coverageReporter: {
+            type: 'in-memory'
+        },
+
+        remapCoverageReporter: {
+            'text-summary': null,
+            json: './coverage/coverage.json',
+            html: './coverage/html'
+        },
 
         webpackMiddleware: {
             stats: 'errors-only'
@@ -24,19 +34,14 @@ module.exports = function (config) {
             noInfo: true
         },
 
-        reporters: ['progress', 'coverage'],
+        reporters: ['progress', 'coverage', 'remap-coverage'],
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: false,
         browserNoActivityTimeout: 60000,
         browsers: ['PhantomJS'],
-        singleRun: true,
-
-        coverageReporter: {
-            type: 'html',
-            dir: 'coverage/'
-        }
+        singleRun: true
     };
 
     config.set(_config);

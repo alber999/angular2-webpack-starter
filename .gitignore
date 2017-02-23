@@ -4,7 +4,6 @@
 node_modules
 typings
 dist
-config/karma-test-shim.js
 tmp
 coverage
 npm-debug.log

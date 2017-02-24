@@ -9,7 +9,8 @@
   "scripts": {
     "i18n:extract": "ng-xi18n",
     "i18n:create": "gulp i18n-init --languages",
-    "i18n:compile": "gulp i18n-update && gulp i18n-xlf2ts",
+    "i18n:update": "gulp i18n-update",
+    "i18n:compile": "gulp i18n-xlf2ts",
     "start": "npm run i18n:compile && webpack-dev-server --inline --progress --port 8080",
     "start:prod": "http-server dist -p 8080 -c-1",
     "test": "karma start",
